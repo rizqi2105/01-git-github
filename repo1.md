@@ -1,6 +1,6 @@
 <h2>Instalasi Git.<br></h2>
-Git tersedia untuk berbagai sistem operasi. Precompiled binaries bisa diperoleh di halaman dowbload Git untuk 3 sistem operasi utama: Linux, Mac OS X, dan Windows. Git bisa menggunakan antarmuka grafis (GUI) maupun CLI (command line interface). Pada materi ini, kita akan banyak menggunakan antarmuka CLI melalui shell (Linux / Mac OS X) atau command prompt / PowerShell di Windows. Setelah instalasi, periksa keberhasilan instalasi dengan menggunakan:
-Windows<br>
+Git adalah version control system yang digunakan para developer untuk mengembangkan software secara bersama-bersama. Fungsi utama git yaitu mengatur versi dari source code program anda dengan mengasih tanda baris dan code mana yang ditambah atau diganti.Git dikenal juga dengan distributed revision control (VCS terdistribusi), artinya penyimpanan database Git tidak hanya berada dalam satu tempat saja. Git tersedia untuk berbagai sistem operasi. Precompiled binaries bisa diperoleh di halaman dowbload Git untuk 3 sistem operasi utama: Linux, Mac OS X, dan Windows. Git bisa menggunakan antarmuka grafis (GUI) maupun CLI (command line interface). Pada materi ini, kita akan banyak menggunakan antarmuka CLI melalui shell (Linux / Mac OS X) atau command prompt / PowerShell di Windows.<br> 
+berikut langkah-langkah menginstall Git sebagai berikut:<br>
 1. Pertama kita harus download Git terlebih dahulu. <img src="https://user-images.githubusercontent.com/91447664/134845967-2d0d6a22-8290-4d4a-8297-b0171f0921cf.png"> 
 2. Kedua setelah download, buka file yang sudah didownload lalu muncul lisensi dan klik next.  <img src="https://user-images.githubusercontent.com/91447664/134846522-891e462c-368d-4c0a-a0e6-e81cb24ff5ce.png"> 
 3. Ketiga pilih lokasi instalasi lalu klik next. <img src="https://user-images.githubusercontent.com/91447664/134866738-5b39dce3-202e-4297-af03-87b0ad0b4ac4.png">
@@ -22,15 +22,37 @@ Windows<br>
 <br>
 <br>
 <h2>Konfigurasi Git<br></h2>
-Secara minimal, user harus memberitahu Git tentang username serta email yang digunakan setiap kali terjadi perubahan pada repo Git. Username serta email ini yang akan dimasukkan oleh Git ke catatan perubahan di repo. Di sistem operasi Linux atau sejanis (UNIX), konfigurasi ini nantinya akan disimpan di $HOME/.gitconfig. Untuk sistem operasi Windows, konfigurasi ini akan disimpan di C:\Document and Settings\NamaUser dengan nama file .gitconfig. Secara minimal, ada 2 hal yang perlu dikonfigurasi yaitu username dan email. Gunakan perintah berikut:<br> <img width="708" alt="Screenshot 2021-09-27 175339" src="https://user-images.githubusercontent.com/91447664/134895285-495d5981-c5e8-4835-a7c2-2d755f75ab10.png">
-
- <br>
+Secara minimal, user harus memberitahu Git tentang username serta email yang digunakan setiap kali terjadi perubahan pada repo Git. Username serta email ini yang akan dimasukkan oleh Git ke catatan perubahan di repo. Di sistem operasi Windows, konfigurasi ini akan disimpan di C:\Document and Settings\NamaUser dengan nama file .gitconfig. Secara minimal, ada 2 hal yang perlu dikonfigurasi yaitu username dan email. <br>
+langkah untuk konfigurasi Git sebagai berikut: <br>
+1. buka CMD di komputer/laptop.<br>
+2. lalu ketik "git config --global user.name "Nama Anda di GitHub"", ini berguna untuk mengatur username pada git, setelah itu enter.<br>
+3. lalu ketik "git config --global user.email email@domain.tld", ini digunakan untuk menatur email pada git, setelah itu enter.<br>
+4. Untuk melihat konfigurasi yang sudah ada ketik"git config --list", lalu enter.<br>
+5. ini adalah contoh hasil konfigurasi pada perubahan email dan nama pada Git.<img width="708" alt="Screenshot 2021-09-27 175339" src="https://user-images.githubusercontent.com/91447664/134895285-495d5981-c5e8-4835-a7c2-2d755f75ab10.png">
+<br>
 Langkah ini cukup dilakukan sekali saja, kecuali jika ingin melakukan perubahan nama dan email.
-Pertama, tinjauan singkat: Git menggunakan bermacam-macam konfigurasi berkas untuk menentukan perilaku non-bawaan yang Anda inginkan. Tempat pertama Git mencari nilai-nilai tersebut adalah di berkas /etc/gitconfig, yang berisi nilai-nilai untuk setiap pengguna di sistem dan semua repositori-repositori mereka. Jika Anda memberikan pilihan --system ke git config, maka pilihan tersebut akan membaca dan menulis dari berkas ini secara khusus.
 
-Tempat selanjutnya yang akan dilihat oleh Git adalah berkas ~/.gitconfig (atau ~/.config/git/config), yang khusus untuk setiap pengguna. Anda bisa membuat Git membaca dan menulis pada berkas ini dengan memberikan pilihan --global.
-
-Akhirnya, Git akan mencari nilai-nilai konfigurasi di dalam berkas konfigurasi yang berada di direktori Git (.git/config) untuk repositori apapun yang sedang Anda gunakan. Nilai-nilai tersebut hanya untuk satu repositori tersebut.
 <br>
 <br>
 <h2>Mengelola Repo Sendiri</h2><br>
+ <ul><h4>• Mengelola Repo Sendiri di Account Sendiri.</h4><br>
+ Langkah-langkah untuk membuat repo sendiri yaitu :<br>
+ 1. pertama buka github.com lalu jika tidak mempunyai akun harus membuat terlebih dahulu, setelah itu login.<br>
+ 2. lalu klik tanda + pada bagian atas, setelah itu pilih New repository<br> <img src="https://user-images.githubusercontent.com/91447664/135107184-401aff7d-ae03-4610-999d-97d04ef38a36.png"><br>
+ 3. setelah itu isikan nama, deskripsi, type repo, serta lisensi. <img src="https://user-images.githubusercontent.com/91447664/135108039-ed8b2e8b-465f-43f6-8044-63283027dcf2.png"><br>
+ 4. lalu klik <b>Create Repository.</b><br>
+ 
+ <h4>• Clone repo</h4>
+ Proses clone adalah proses untuk menduplikasikan remote repo di GitHub ke komputer lokal. Untuk melakukan proses clone digunakan langkah-langkah yaitu:<br>
+ 1. pertama buka Github dan login terlebih dahulu.<br>
+ 2. lalu pilih lokasi penyimpanan/folder untuk penyimpanan clone repo yang akan disimpan. <img src="https://user-images.githubusercontent.com/91447664/135113978-9ebf2ca6-130f-466d-bf7d-2b15db2528f3.png"><br><br>
+ 3. setelah itu klik kanan pada folder yang mau disimpan, setelah itu pilih Git bash here.<img src="https://user-images.githubusercontent.com/91447664/135114578-de420357-85a2-4956-8585-266ba56a7ca4.png"><br><br>
+ 4. lalu buka kembali Github dan pilih repo yang akan disimpan.<br>
+ 5. kemudian klik tombol <b>Code<b/> dan copy paste link https nya.<img src="https://user-images.githubusercontent.com/91447664/135115601-a32bab8e-f292-4935-afd6-b3172157ce2f.png"><br><br>
+ 6. buka kembali Git bash (cmd), lalu ketik "git clone https://github.com/rizqi2105/01-mppl.git" setelah itu enter dan seperti ini hasil nya: <img src="https://user-images.githubusercontent.com/91447664/135117806-13ddfefb-2ae6-486a-86da-9240ce7a7389.png">
+</ul>
+
+
+ 
+ 
+ 
